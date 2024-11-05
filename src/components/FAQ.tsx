@@ -70,7 +70,7 @@ const FAQSection = () => {
               className=" rounded-xl shadow-lg overflow-hidden"
             >
               <motion.button
-                className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-[#f29244] transition-colors"
+                className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-[#a8510b] duration-2s transition-colors"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
                 <span className="font-medium  pr-4">{faq.q}</span>

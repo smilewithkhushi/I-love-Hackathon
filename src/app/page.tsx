@@ -8,7 +8,7 @@ import HackathonTimeline from "@/components/Timeline";
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col p-4">
       <HeroSection />
       <AboutSection/>
       <HackathonStats/>

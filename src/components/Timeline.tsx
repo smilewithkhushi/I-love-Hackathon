@@ -83,7 +83,7 @@ const HackathonTimeline = () => {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-400 max-w-4xl mx-auto">
             Join us as we travel across Indian tech hubs, bringing innovation
             and excitement to five major cities.
           </p>

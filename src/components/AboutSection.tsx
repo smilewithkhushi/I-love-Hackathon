@@ -12,8 +12,8 @@ const AboutSection = () => {
   } | null>(null);
   const { scrollYProgress } = useScroll();
 
-  const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
-  const y = useTransform(scrollYProgress, [0, 0.3], [100, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 0.2], [0, 1]);
+  const y = useTransform(scrollYProgress, [0, 0.2], [100, 0]);
 
 
   const features = [
@@ -77,7 +77,7 @@ const AboutSection = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black py-20 px-4">
+    <div className="min-h-screen bg-blackpy-20 px-4">
       {/* Main content */}
       <motion.div className="max-w-6xl mx-auto" style={{ opacity, y }}>
         {/* Header */}

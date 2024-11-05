@@ -1,31 +1,32 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { Users, Award, MapPin, Calendar, Briefcase, Rocket, Trophy } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Users, Award, MapPin, Briefcase, Rocket, Trophy } from 'lucide-react';
 
-const CounterComponent = ({ end, duration = 2, prefix = '', suffix = '' }: { end: number, duration?: number, prefix?: string, suffix?: string }) => {
+const CounterComponent = ({ end, duration = 10, prefix = '', suffix = '' }: { end: number, duration?: number, prefix?: string, suffix?: string }) => {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-  const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
-    if (isInView && !hasAnimated) {
-      setHasAnimated(true);
-      let start = 0;
-      const incrementTime = (duration * 1000) / end;
-      const counter = setInterval(() => {
-        start += 1;
-        setCount(start);
-        if (start === end) {
-          clearInterval(counter);
-        }
-      }, incrementTime);
+    let startTime: number | null = null;
+    const animate = (currentTime: number | null) => {
+      if (!startTime) startTime = currentTime;
+      const progress = Math.min(
+        (currentTime! - startTime!) / (duration * 1000),
+        1
+      );
 
-      return () => clearInterval(counter);
-    }
-  }, [end, duration, isInView, hasAnimated]);
+      setCount(Math.floor(progress * end));
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      } else {
+        setCount(end);
+      }
+    };
+    requestAnimationFrame(animate);
+  }, [end, duration]);
 
   return (
     <span ref={ref} className="inline-flex items-center justify-center">
@@ -38,27 +39,7 @@ const CounterComponent = ({ end, duration = 2, prefix = '', suffix = '' }: { end
 
 const HackathonStats = () => {
   const stats = [
-    {
-      icon: <Users className="w-8 h-8" />,
-      label: "Registrations",
-      value: 15000,
-      suffix: "+",
-      color: "from-blue-500 to-purple-500"
-    },
-    {
-      icon: <Briefcase className="w-8 h-8" />,
-      label: "Sponsors",
-      value: 50,
-      suffix: "+",
-      color: "from-green-500 to-teal-500"
-    },
-    {
-      icon: <Calendar className="w-8 h-8" />,
-      label: "Events",
-      value: 100,
-      suffix: "+",
-      color: "from-orange-500 to-red-500"
-    },
+
     {
       icon: <MapPin className="w-8 h-8" />,
       label: "Cities",
@@ -67,12 +48,13 @@ const HackathonStats = () => {
       color: "from-pink-500 to-rose-500"
     },
     {
-      icon: <Rocket className="w-8 h-8" />,
-      label: "Hackers",
-      value: 5000,
+      icon: <Users className="w-8 h-8" />,
+      label: "Registrations",
+      value: 3000,
       suffix: "+",
-      color: "from-violet-500 to-purple-500"
+      color: "from-blue-500 to-purple-500"
     },
+
     {
       icon: <Award className="w-8 h-8" />,
       label: "Projects",
@@ -81,9 +63,23 @@ const HackathonStats = () => {
       color: "from-yellow-500 to-orange-500"
     },
     {
+      icon: <Briefcase className="w-8 h-8" />,
+      label: "Sponsors",
+      value: 10,
+      suffix: "+",
+      color: "from-green-500 to-teal-500"
+    },
+    {
+      icon: <Rocket className="w-8 h-8" />,
+      label: "Hackers",
+      value: 1500,
+      suffix: "+",
+      color: "from-violet-500 to-purple-500"
+    },
+    {
       icon: <Trophy className="w-8 h-8" />,
       label: "Prize Pool",
-      value: 50000,
+      value: 5000,
       prefix: "$",
       color: "from-cyan-500 to-blue-500"
     }
@@ -91,6 +87,18 @@ const HackathonStats = () => {
 
   return (
     <div className="bg-[#0A0A0A] py-10 px-4">
+
+    <motion.h2
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8 }}
+    className="text-5xl font-bold text-center mb-16 text-white relative z-10"
+  >
+ 
+ <h1 className="text-center text-transparent bg-clip-text bg-gradient-to-r from-[#f72c11] to-[#13A326] font-bold text-5xl mb-4">
+      Our Highlights
+    </h1>
+  </motion.h2>
       <div className="max-w-7xl mx-auto">
         
         {/* Stats Grid */}
@@ -158,25 +166,6 @@ const HackathonStats = () => {
           ))}
         </motion.div>
 
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="mt-20 text-center"
-        >
-          <p className="text-xl text-gray-400 mb-6">
-            Be part of something extraordinary!
-          </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-3 bg-gradient-to-r from-[#822d1f] to-[#822d1f]/80 text-white rounded-full font-bold"
-          >
-            Register Now
-          </motion.button>
-        </motion.div>
       </div>
     </div>
   );
