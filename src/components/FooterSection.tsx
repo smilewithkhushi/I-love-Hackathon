@@ -11,13 +11,13 @@ import {
 } from 'lucide-react';
 
 const StyledFooter = () => {
-  const quickLinks = [
-    { name: "About", href: "#about" },
-    { name: "Schedule", href: "#schedule" },
-    { name: "Sponsors", href: "#sponsors" },
-    { name: "Register", href: "#register" },
-    { name: "FAQs", href: "#faqs" }
-  ];
+  // const quickLinks = [
+  //   { name: "About", href: "#about" },
+  //   { name: "Schedule", href: "#schedule" },
+  //   { name: "Sponsors", href: "#sponsors" },
+  //   { name: "Register", href: "#register" },
+  //   { name: "FAQs", href: "#faqs" }
+  // ];
 
   const socialLinks = [
     { icon: <Github className="w-5 h-5" />, href: "#", label: "Github" },
