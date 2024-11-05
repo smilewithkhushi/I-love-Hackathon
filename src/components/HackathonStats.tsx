@@ -1,55 +1,42 @@
 'use client';
 
-import React from 'react';
-import { motion, useScroll, useTransform, useInView } from 'framer-motion';
-import { useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import { Users, Award, MapPin, Calendar, Briefcase, Rocket, Trophy } from 'lucide-react';
 
-interface CounterProps {
-  from: number;
-  to: number;
-  duration?: number;
-}
+const CounterComponent = ({ end, duration = 2, prefix = '', suffix = '' }: { end: number, duration?: number, prefix?: string, suffix?: string }) => {
+  const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const [hasAnimated, setHasAnimated] = useState(false);
 
-const Counter: React.FC<CounterProps> = ({ from, to, duration = 2 }) => {
-  const nodeRef = useRef(null);
-  const isInView = useInView(nodeRef, { once: true, margin: "-100px" });
+  useEffect(() => {
+    if (isInView && !hasAnimated) {
+      setHasAnimated(true);
+      let start = 0;
+      const incrementTime = (duration * 1000) / end;
+      const counter = setInterval(() => {
+        start += 1;
+        setCount(start);
+        if (start === end) {
+          clearInterval(counter);
+        }
+      }, incrementTime);
+
+      return () => clearInterval(counter);
+    }
+  }, [end, duration, isInView, hasAnimated]);
 
   return (
-    <motion.span
-      ref={nodeRef}
-      initial={{ opacity: 0 }}
-      animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-    >
-      <motion.span
-        initial={{ opacity: 0 }}
-        animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-        transition={{ duration: 0.2 }}
-      >
-        {isInView && (
-          <motion.span
-            initial={{ value: from }}
-            animate={{ value: to }}
-            transition={{ duration }}
-            // eslint-disable-next-line react/no-children-prop
-            children={({ value }: { value: number }) => Math.floor(value)}
-          />
-        )}
-      </motion.span>
-    </motion.span>
+    <span ref={ref} className="inline-flex items-center justify-center">
+      {prefix}
+      {count.toLocaleString()}
+      {suffix}
+    </span>
   );
 };
 
 const HackathonStats = () => {
-  const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"]
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0, 1, 0]);
-
   const stats = [
     {
       icon: <Users className="w-8 h-8" />,
@@ -103,41 +90,22 @@ const HackathonStats = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0A0A0A] py-20 relative overflow-hidden" ref={containerRef}>
-      {/* Background Effect */}
-      <motion.div
-        className="absolute inset-0 bg-gradient-to-b from-transparent via-[#822d1f]/10 to-transparent"
-        style={{ y, opacity }}
-      />
-
-      {/* Content */}
-      <div className="max-w-7xl mx-auto px-4">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-20"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Hackathon in Numbers
-          </h2>
-          <div className="w-24 h-1 bg-[#822d1f] mx-auto"/>
-        </motion.div>
-
+    <div className="bg-[#0A0A0A] py-10 px-4">
+      <div className="max-w-7xl mx-auto">
+        
         {/* Stats Grid */}
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+        <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={{
             visible: {
               transition: {
-                staggerChildren: 0.2
+                staggerChildren: 0.1
               }
             }
           }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-content "
         >
           {stats.map((stat, index) => (
             <motion.div
@@ -146,13 +114,17 @@ const HackathonStats = () => {
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 }
               }}
-              whileHover={{ scale: 1.05 }}
               className="relative group"
             >
-              {/* Card */}
-              <div className="bg-[#111111] rounded-xl p-6 h-full">
-                {/* Background Gradient */}
-                <div className={`absolute inset-0 bg-gradient-to-r ${stat.color} text-white opacity-0 group-hover:opacity-10 rounded-xl transition-opacity duration-300`} />
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                className="bg-[#111111] rounded-xl p-6 h-full relative overflow-hidden"
+              >
+                {/* Gradient Background */}
+                <div 
+                  className={`absolute inset-0 bg-gradient-to-r ${stat.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
+                />
 
                 {/* Icon */}
                 <motion.div
@@ -163,26 +135,48 @@ const HackathonStats = () => {
                   {stat.icon}
                 </motion.div>
 
-                {/* Stats */}
-                <h3 className="text-3xl md:text-4xl font-bold text-white mb-2 flex items-center">
-                  <span >{stat.prefix}</span>
-                  <Counter from={0} to={stat.value} />
-                  <span >{stat.suffix}</span>
+                {/* Counter */}
+                <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">
+                  <CounterComponent 
+                    end={stat.value}
+                    prefix={stat.prefix}
+                    suffix={stat.suffix}
+                  />
                 </h3>
-                <p>{stat.label}</p>
+                <p className="text-gray-400">{stat.label}</p>
 
-                {/* Decorative Line */}
+                {/* Animated Line */}
                 <motion.div
-                  className={`h-1 bg-gradient-to-r ${stat.color} mt-4 rounded-full`}
                   initial={{ scaleX: 0 }}
                   whileInView={{ scaleX: 1 }}
+                  viewport={{ once: true }}
                   transition={{ duration: 0.8 }}
+                  className={`h-1 bg-gradient-to-r ${stat.color} mt-4 rounded-full`}
                 />
-              </div>
+              </motion.div>
             </motion.div>
           ))}
         </motion.div>
 
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mt-20 text-center"
+        >
+          <p className="text-xl text-gray-400 mb-6">
+            Be part of something extraordinary!
+          </p>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="px-8 py-3 bg-gradient-to-r from-[#822d1f] to-[#822d1f]/80 text-white rounded-full font-bold"
+          >
+            Register Now
+          </motion.button>
+        </motion.div>
       </div>
     </div>
   );

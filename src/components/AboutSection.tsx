@@ -77,7 +77,7 @@ const AboutSection = () => {
   };
 
   return (
-    <div className="min-h-screen py-20 px-4">
+    <div className="min-h-screen bg-black py-20 px-4">
       {/* Main content */}
       <motion.div className="max-w-6xl mx-auto" style={{ opacity, y }}>
         {/* Header */}
@@ -99,7 +99,7 @@ const AboutSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="text-xl text-white max-w-4xl mx-auto">
+          <p className="text-md md:text-xl text-white max-w-4xl mx-auto">
             The I ❤️ Hackathon is a series of 24-hour offline hackathons across
             5+ cities in India, where developers will gather to build innovative
             blockchain solutions focused on governance, decentralized finance,

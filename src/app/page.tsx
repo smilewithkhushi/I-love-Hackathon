@@ -4,13 +4,15 @@ import FooterSection from "@/components/FooterSection";
 import HackathonStats from "@/components/HackathonStats";
 import HeroSection from "@/components/HeroSection";
 import PartnersShowcase from "@/components/PartnersShowcase";
+import HackathonTimeline from "@/components/Timeline";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="flex flex-col">
       <HeroSection />
       <AboutSection/>
       <HackathonStats/>
+      <HackathonTimeline/>
       <PartnersShowcase/>
       <FAQSection/>
       <FooterSection />
