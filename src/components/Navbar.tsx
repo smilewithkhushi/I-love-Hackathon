@@ -45,7 +45,7 @@ const NavigationBar = () => {
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={`fixed w-full px-4 z-50 transition-all duration-300 ${
+        className={`w-full px-4 z-50 transition-all duration-300 ${
           isScrolled ? 'bg-black/90 backdrop-blur-md' : 'bg-transparent'
         }`}
       >
