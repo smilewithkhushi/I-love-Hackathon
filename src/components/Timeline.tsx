@@ -10,54 +10,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 
-const events = [
-  {
-    city: "Pune",
-    date: "Dec 12-14, 2024",
-    venue: "MIT World Peace University, Pune, Maharashtra",
-    image: "/api/placeholder/800/400",
-    description: "",
-    timing: "24 Hours",
-    registrationOpen: true,
-  },
-
-  {
-    city: "Bhubaneshwar",
-    date: "Dec 17-18, 2024",
-    venue: "Centurion University, Bhubaneshwar, Odisha",
-    image: "/assets/college/odisha.jpg",
-    description: "",
-    timing: "24 Hours",
-    registrationOpen: true,
-  },
-  {
-    city: "Jaipur",
-    date: "Dec , 2024",
-    venue: "Jaipur",
-    image: "/api/placeholder/800/400",
-    description: "",
-    timing: "24 Hours",
-    registrationOpen: true,
-  },
-  {
-    city: "Indore",
-    date: "Dec , 2024",
-    venue: "Jaipur",
-    image: "/api/placeholder/800/400",
-    description: "",
-    timing: "24 Hours",
-    registrationOpen: true,
-  },
-  {
-    city: "Chandigarh",
-    date: "Dec , 2024",
-    venue: "Jaipur",
-    image: "/api/placeholder/800/400",
-    description: "",
-    timing: "24 Hours",
-    registrationOpen: true,
-  },
-];
+import events from "@/data/events";
 
 const HackathonTimeline = () => {
   const [selectedEvent, setSelectedEvent] = useState(0);

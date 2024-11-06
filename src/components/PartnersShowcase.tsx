@@ -2,17 +2,11 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const PartnersShowcase = () => {
   // Partner logos data
   const partners = [
-    "/api/placeholder/200/80",
-    "/api/placeholder/200/80",
-    "/api/placeholder/200/80",
-    "/api/placeholder/200/80",
-    "/api/placeholder/200/80",
-    "/api/placeholder/200/80",
-    "/api/placeholder/200/80",
     "/api/placeholder/200/80",
   ];
 
@@ -105,7 +99,9 @@ const PartnersShowcase = () => {
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-20 rounded-xl transition-opacity duration-300"
                 />
-                <img
+                <Image
+                width={200}
+                height={80}
                   src={logo}
                   alt={`Partner ${index + 1}`}
                   className="max-w-[200px] max-h-[80px] object-contain"

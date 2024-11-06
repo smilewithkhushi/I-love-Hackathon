@@ -3,7 +3,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Github, 
   Twitter, 
   Linkedin, 
   Instagram,
@@ -20,10 +19,9 @@ const StyledFooter = () => {
   // ];
 
   const socialLinks = [
-    { icon: <Github className="w-5 h-5" />, href: "#", label: "Github" },
-    { icon: <Twitter className="w-5 h-5" />, href: "#", label: "Twitter" },
-    { icon: <Linkedin className="w-5 h-5" />, href: "#", label: "LinkedIn" },
-    { icon: <Instagram className="w-5 h-5" />, href: "#", label: "Instagram" },
+    { icon: <Twitter className="w-5 h-5" />, href: "https://x.com/indiablockchainmonth", label: "Twitter" },
+    { icon: <Linkedin className="w-5 h-5" />, href: "https://linkedin.com/c/indiablockchainmonth", label: "LinkedIn" },
+    { icon: <Instagram className="w-5 h-5" />, href: "https://instagram.com/indiablockchainmonth", label: "Instagram" },
     ];
 
   return (
@@ -125,7 +123,7 @@ const StyledFooter = () => {
               <Heart className="w-4 h-4 text-[#822d1f]" />
               <span>by Hackers</span>
             </motion.p>
-            <div className="mt-4 md:mt-0">
+            {/* <div className="mt-4 md:mt-0">
               <motion.a 
                 href="#terms" 
                 className="text-gray-400 hover:text-white mr-6"
@@ -140,7 +138,7 @@ const StyledFooter = () => {
               >
                 Privacy
               </motion.a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
