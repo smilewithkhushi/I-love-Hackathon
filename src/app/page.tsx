@@ -4,7 +4,7 @@ import FAQSection from "@/components/FAQ";
 import FooterSection from "@/components/FooterSection";
 import HackathonStats from "@/components/HackathonStats";
 import HeroSection from "@/components/HeroSection";
-//import PartnersShowcase from "@/components/PartnersShowcase";
+import PartnersShowcase from "@/components/PartnersShowcase";
 import HackathonTimeline from "@/components/Timeline";
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
       <AboutSection/>
       <HackathonStats/>
       <HackathonTimeline/>
-      {/* <PartnersShowcase/> */}
+      <PartnersShowcase/>
       <CallForPartners/>
       <FAQSection/>
       <FooterSection />
