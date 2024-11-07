@@ -22,7 +22,8 @@ const StyledFooter = () => {
     { icon: <Twitter className="w-5 h-5" />, href: "https://x.com/indiablockchainmonth", label: "Twitter" },
     { icon: <Linkedin className="w-5 h-5" />, href: "https://linkedin.com/c/indiablockchainmonth", label: "LinkedIn" },
     { icon: <Instagram className="w-5 h-5" />, href: "https://instagram.com/indiablockchainmonth", label: "Instagram" },
-    ];
+
+  ];
 
   return (
     <footer className="bg-black text-white relative overflow-hidden">
@@ -30,7 +31,7 @@ const StyledFooter = () => {
       <div className="max-w-7xl mx-auto px-4 py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Section */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-2">
             <motion.h3 
               className="text-2xl font-bold mb-6"
               initial={{ opacity: 0, y: 20 }}
@@ -90,7 +91,7 @@ const StyledFooter = () => {
           </div> */}
 
           {/* Social Links */}
-          <div>
+          <div className="lg:col-span-2">
             <h3 className="text-xl font-semibold mb-6">Connect With Us</h3>
             <div className="flex flex-wrap gap-4">
               {socialLinks.map((link) => (

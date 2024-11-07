@@ -63,7 +63,8 @@ const PartnersShowcase = () => {
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-r from-purple-500 to-blue-500 opacity-0 group-hover:opacity-20 rounded-xl transition-opacity duration-300"
                 />
-                <img
+                <Image
+                
                   src={logo}
                   alt={`Partner ${index + 1}`}
                   className="max-w-[200px] max-h-[80px] object-contain"

@@ -16,27 +16,27 @@ const HackathonTimeline = () => {
   const [selectedEvent, setSelectedEvent] = useState(0);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#822d1f]/5 to-green-900/5 py-20 px-4">
+    <div className="min-h-screen bg-gradient-to-b from-[#822d1f]/5 to-green-900/5 py-20 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-5xl font-bold text-center mb-16 text-white relative z-10"
-        >
-          <h1 className="text-center text-transparent bg-clip-text bg-gradient-to-r from-[#f72c11] to-[#13A326] font-bold text-5xl mb-4">
-            Timeline
-          </h1>
-        </motion.h2>
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="font-bold text-center mb-8 text-white relative z-10"
+      >
+        <h1 className="text-center text-transparent bg-clip-text bg-gradient-to-r from-[#f72c11] to-[#13A326] font-bold text-2xl md:text-5xl">
+          Timeline
+        </h1>
+      </motion.h2>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="text-center mb-8 md:mb-20"
         >
-          <p className="text-gray-400 max-w-4xl mx-auto">
+          <p className="text-sm md:text-lg text-gray-200 mx-auto">
             Join us as we travel across Indian tech hubs, bringing innovation
             and excitement to five major cities.
           </p>
@@ -52,15 +52,15 @@ const HackathonTimeline = () => {
                 className={`relative px-6 py-3 rounded-full ${
                   selectedEvent === index
                     ? "bg-[#822d1f] text-white"
-                    : "bg-[#111111] text-gray-400 hover:bg-[#822d1f]/20"
+                    : "bg-[#111111] text-gray-300 hover:bg-[#822d1f]/20"
                 } transition-all focus:outline-none`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <span className="relative z-10 font-medium">{event.city}</span>
+                <span className="text-sm md:text-lg relative z-10 font-medium">{event.city}</span>
                 {index < events.length - 1 && (
                   <motion.div
-                    className="absolute top-1/2 -right-4 text-gray-600"
+                    className="absolute top-1/2 -right-4"
                     animate={{ x: [0, 5, 0] }}
                     transition={{ repeat: Infinity, duration: 1.5 }}
                   >
@@ -151,11 +151,6 @@ const HackathonTimeline = () => {
                   )}
                 </motion.button>
 
-                {!events[selectedEvent].registrationOpen && (
-                  <p className="text-gray-500 text-sm mt-2">
-                    Registration opens 2 months before the event
-                  </p>
-                )}
               </motion.div>
             </div>
           </motion.div>

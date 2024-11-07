@@ -16,29 +16,28 @@ const FAQSection = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#822d1f]/5 to-green-900/5 py-20 px-4">
+    <div className="w-full min-h-screen bg-gradient-to-b from-[#822d1f]/5 to-green-900/5 py-20 px-6">
       <motion.div
         className="max-w-3xl mx-auto"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-         <motion.h2
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-5xl font-bold text-center mb-12 text-white relative z-10"
+          className="font-bold text-center mb-8 text-white relative z-10"
         >
-       
-       <h1 className="text-center text-transparent bg-clip-text bg-gradient-to-r from-[#f72c11] to-[#13A326] font-bold text-5xl">
+          <h1 className="text-center text-transparent bg-clip-text bg-gradient-to-r from-[#f72c11] to-[#13A326] font-bold text-2xl md:text-5xl">
             Frequently Asked Questions
           </h1>
         </motion.h2>
 
-          <p className="mb-12 text-center">
-            Got questions? We have got you covered with the most common
-            questions about I ❤️ Hackathon.
-          </p>
+        <p className="mb-12 text-sm md:text-lg text-center">
+          Got questions? We have got you covered with the most common questions
+          about I ❤️ Hackathon.
+        </p>
 
         {/* Search Bar */}
         <motion.div
@@ -54,7 +53,7 @@ const FAQSection = () => {
               placeholder="Search questions..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#822d1f] focus:border-transparent"
+              className="text-sm md:text-md w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#822d1f] focus:border-transparent"
             />
           </div>
         </motion.div>
@@ -73,7 +72,7 @@ const FAQSection = () => {
                 className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-[#a8510b] duration-2s transition-colors"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
-                <span className="font-medium  pr-4">{faq.q}</span>
+                <span className="text-sm md:text-lg pr-4">{faq.q}</span>
                 <motion.div
                   animate={{ rotate: openIndex === index ? 180 : 0 }}
                   transition={{ duration: 0.2 }}
@@ -90,7 +89,7 @@ const FAQSection = () => {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <div className="px-6 py-4">{faq.a}</div>
+                    <div className="px-6 py-4 text-sm md:text-md">{faq.a}</div>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -105,9 +104,7 @@ const FAQSection = () => {
             animate={{ opacity: 1 }}
             className="text-center py-12"
           >
-            <p >
-              No questions found matching your search.
-            </p>
+            <p>No questions found matching your search.</p>
           </motion.div>
         )}
       </motion.div>

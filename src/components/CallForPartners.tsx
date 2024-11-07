@@ -36,8 +36,8 @@ const JoinCard: React.FC<JoinCardProps> = ({
         <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4">
           <Icon className="w-6 h-6" aria-hidden="true" />
         </div>
-        <h3 className="text-2xl font-bold mb-2">{title}</h3>
-        <p className="text-white/80">{role}</p>
+        <h3 className="text-xl md:text-2xl font-bold mb-2">{title}</h3>
+        <p className="text-sm md:text-lg text-white/80">{role}</p>
       </div>
 
       {/* Benefits List */}
@@ -51,7 +51,7 @@ const JoinCard: React.FC<JoinCardProps> = ({
             className="flex items-start space-x-3"
           >
             <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
-            <p className="text-gray-300">{benefit}</p>
+            <p className="text-gray-200 text-sm md:text-md">{benefit}</p>
           </motion.div>
         ))}
       </div>
@@ -66,7 +66,7 @@ const JoinCard: React.FC<JoinCardProps> = ({
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
         >
-          <button className="w-full flex items-center justify-center space-x-2 px-6 py-3 bg-white text-gray-900 rounded-xl font-semibold hover:bg-gray-100 transition-colors group">
+          <button className="text-sm md:text-md w-full flex items-center justify-center space-x-2 px-6 py-3 bg-white text-gray-900 rounded-xl font-semibold hover:bg-gray-100 transition-colors group">
             <span>{buttonText}</span>
             <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </button>
@@ -126,7 +126,7 @@ const CallForPartners = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-black py-20 px-4 relative overflow-hidden">
+    <div className="min-h-screen bg-black py-20 px-6 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
         {[...Array(20)].map((_, i) => (
@@ -153,22 +153,24 @@ const CallForPartners = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-5xl font-bold text-center mb-8 text-white relative z-10"
-        >
-          <h1 className="text-center text-transparent bg-clip-text bg-gradient-to-r from-[#f72c11] to-[#13A326] font-bold text-5xl">
-            Join our Innovation Journey
-          </h1>
-        </motion.h2>
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="font-bold text-center mb-8 text-white relative z-10"
+      >
+        <h1 className="text-center text-transparent bg-clip-text bg-gradient-to-r from-[#f72c11] to-[#13A326] font-bold text-2xl md:text-5xl">
+          Join our Innovation Journey
+        </h1>
+      </motion.h2>
+
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
-          <p className="text-xl text-gray-400 max-w-4xl mx-auto">
+          <p className="text-sm md:text-xl max-w-4xl mx-auto">
             Be part of India&apos;s largest hackathon series and help shape the
             future of technology
           </p>

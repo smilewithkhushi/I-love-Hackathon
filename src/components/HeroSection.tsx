@@ -114,12 +114,12 @@ const HeroSection = () => {
         <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 text-white">
           {/* Floating banner */}
           <motion.div
-            className="mb-6 px-4 py-2 bg-white/10 backdrop-blur rounded-full text-sm font-medium"
+            className="mb-10 px-4 py-2 bg-white/10 backdrop-blur rounded-full text-sm font-medium"
             variants={floatingBanner}
             initial="initial"
             animate="animate"
           >
-            24 Hours of Innovation 🚀
+            India&apos;s Biggest Series of Web3 Hackathons in 2024!🚀
           </motion.div>
 
           {/* Main title section */}

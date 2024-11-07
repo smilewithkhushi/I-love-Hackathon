@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import { Code, Users, Trophy, Rocket, Brain, Coffee } from "lucide-react";
 const AboutSection = () => {
   const [] = useState<{
@@ -10,10 +10,7 @@ const AboutSection = () => {
     alt: string;
     title: string;
   } | null>(null);
-  const { scrollYProgress } = useScroll();
-
-  const opacity = useTransform(scrollYProgress, [0, 0.2], [0, 1]);
-  const y = useTransform(scrollYProgress, [0, 0.2], [100, 0]);
+  useScroll();
 
 
   const features = [
@@ -77,18 +74,18 @@ const AboutSection = () => {
   };
 
   return (
-    <div className="min-h-screen bg-blackpy-20 px-4">
+    <div className="min-h-screen bg-blackpy-20 px-4 pt-16 pb-10 p-4 lg:p-16">
       {/* Main content */}
-      <motion.div className="max-w-6xl mx-auto" style={{ opacity, y }}>
+      <motion.div className="max-w-6xl mx-auto">
         {/* Header */}
 
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-5xl font-bold text-center mb-16 text-white relative z-10"
+          className="font-bold text-center mb-8 text-white relative z-10"
         >
-          <h1 className="text-center text-transparent bg-clip-text bg-gradient-to-r from-[#f72c11] to-[#13A326] font-bold text-5xl mb-4">
+          <h1 className="text-center text-transparent bg-clip-text bg-gradient-to-r from-[#f72c11] to-[#13A326] font-bold text-2xl md:text-5xl">
             About the Hackathon
           </h1>
         </motion.h2>
@@ -99,13 +96,13 @@ const AboutSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="text-md md:text-xl text-white max-w-4xl mx-auto">
+          <p className="text-sm md:text-xl text-white text-justify md:text-center mx-auto">
             The I ❤️ Hackathon is a series of 24-hour offline hackathons across
             5+ cities in India, where developers will gather to build innovative
             blockchain solutions focused on governance, decentralized finance,
             gaming, real world assets, tokenization and more!
-            <br/>
-             We’re bringing it to Lucknow, Jaipur, Bhubaneswar, Indore,
+            <br />
+            We’re bringing it to Lucknow, Jaipur, Bhubaneswar, Indore,
             Chandigarh, and Pune, allowing you to compete, create, and connect
             with the top minds in Web3.
           </p>
@@ -124,15 +121,15 @@ const AboutSection = () => {
               key={index}
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
-              className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+              className="flex flex-col align-center items-center bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
             >
               <div className="bg-[#822d1f]/10 w-12 h-12 rounded-full flex items-center justify-center mb-4 text-[#822d1f]">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-bold mb-2 text-[#822d1f]">
+              <h3 className="text-lg md:text-xl font-bold mb-2 text-[#822d1f]">
                 {feature.title}
               </h3>
-              <p className="text-gray-600">{feature.description}</p>
+              <p className="text-gray-600 text-sm text-center">{feature.description}</p>
             </motion.div>
           ))}
         </motion.div>

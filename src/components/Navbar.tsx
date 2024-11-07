@@ -1,21 +1,12 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence, useScroll } from 'framer-motion';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
 const NavigationBar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const menuItems = [
     {
@@ -43,11 +34,9 @@ const NavigationBar = () => {
   return (
     <>
       <motion.nav
-        initial={{ y: -100 }}
+        initial={{ y: 0 }}
         animate={{ y: 0 }}
-        className={`w-full px-4 z-50 transition-all duration-300 ${
-          isScrolled ? 'bg-black/90 backdrop-blur-md' : 'bg-transparent'
-        }`}
+        className={`backdrop-blur-xl bg-gradient-to-b from-[#822d1f] to-green-900 w-full px-4 z-50 transition-all duration-300`}
       >
         <div className="max-w-5xl mx-auto px-4">
           <div className="flex items-center justify-between h-20">
@@ -100,7 +89,7 @@ const NavigationBar = () => {
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
-                        className="absolute left-0 mt-2 w-48 rounded-xl bg-black/90 backdrop-blur-md py-2 shadow-xl"
+                        className="absolute left-0 mt-2 w-48 rounded-xl backdrop-blur-md py-2 shadow-xl"
                       >
                         {item.dropdown.map((dropdownItem, idx) => (
                           <motion.a
@@ -152,7 +141,7 @@ const NavigationBar = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden bg-black/90 backdrop-blur-md"
+              className="md:hidden backdrop-blur-md"
             >
               <div className="px-4 py-6 space-y-4">
                 {menuItems.map((item, index) => (

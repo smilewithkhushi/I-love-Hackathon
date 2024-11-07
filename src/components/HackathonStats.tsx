@@ -1,10 +1,20 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-import { Users, Award, MapPin, Briefcase, Rocket, Trophy } from 'lucide-react';
+import React, { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import { Users, Award, MapPin, Briefcase, Rocket, Trophy } from "lucide-react";
 
-const CounterComponent = ({ end, duration = 10, prefix = '', suffix = '' }: { end: number, duration?: number, prefix?: string, suffix?: string }) => {
+const CounterComponent = ({
+  end,
+  duration = 10,
+  prefix = "",
+  suffix = "",
+}: {
+  end: number;
+  duration?: number;
+  prefix?: string;
+  suffix?: string;
+}) => {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
 
@@ -39,20 +49,19 @@ const CounterComponent = ({ end, duration = 10, prefix = '', suffix = '' }: { en
 
 const HackathonStats = () => {
   const stats = [
-
     {
       icon: <MapPin className="w-8 h-8" />,
       label: "Cities",
       value: 75,
       suffix: "+",
-      color: "from-pink-500 to-rose-500"
+      color: "from-pink-500 to-rose-500",
     },
     {
       icon: <Users className="w-8 h-8" />,
       label: "Registrations",
       value: 3000,
       suffix: "+",
-      color: "from-blue-500 to-purple-500"
+      color: "from-blue-500 to-purple-500",
     },
 
     {
@@ -60,47 +69,44 @@ const HackathonStats = () => {
       label: "Projects",
       value: 1200,
       suffix: "+",
-      color: "from-yellow-500 to-orange-500"
+      color: "from-yellow-500 to-orange-500",
     },
     {
       icon: <Briefcase className="w-8 h-8" />,
       label: "Sponsors",
       value: 10,
       suffix: "+",
-      color: "from-green-500 to-teal-500"
+      color: "from-green-500 to-teal-500",
     },
     {
       icon: <Rocket className="w-8 h-8" />,
       label: "Hackers",
       value: 1500,
       suffix: "+",
-      color: "from-violet-500 to-purple-500"
+      color: "from-violet-500 to-purple-500",
     },
     {
       icon: <Trophy className="w-8 h-8" />,
       label: "Prize Pool",
       value: 5000,
       prefix: "$",
-      color: "from-cyan-500 to-blue-500"
-    }
+      color: "from-cyan-500 to-blue-500",
+    },
   ];
 
   return (
-    <div className="bg-[#0A0A0A] py-10 px-4">
-
-    <motion.h2
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.8 }}
-    className="text-5xl font-bold text-center mb-16 text-white relative z-10"
-  >
- 
- <h1 className="text-center text-transparent bg-clip-text bg-gradient-to-r from-[#f72c11] to-[#13A326] font-bold text-5xl mb-4">
-      Our Highlights
-    </h1>
-  </motion.h2>
+    <div className="bg-[#0A0A0A] py-10 px-6">
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="font-bold text-center mb-8 text-white relative z-10"
+      >
+        <h1 className="text-center text-transparent bg-clip-text bg-gradient-to-r from-[#f72c11] to-[#13A326] font-bold text-2xl md:text-5xl">
+          Our Highlights
+        </h1>
+      </motion.h2>
       <div className="max-w-7xl mx-auto">
-        
         {/* Stats Grid */}
         <motion.div
           initial="hidden"
@@ -109,18 +115,18 @@ const HackathonStats = () => {
           variants={{
             visible: {
               transition: {
-                staggerChildren: 0.1
-              }
-            }
+                staggerChildren: 0.1,
+              },
+            },
           }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-content "
+          className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-content "
         >
           {stats.map((stat, index) => (
             <motion.div
               key={index}
               variants={{
                 hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 }
+                visible: { opacity: 1, y: 0 },
               }}
               className="relative group"
             >
@@ -130,7 +136,7 @@ const HackathonStats = () => {
                 className="bg-[#111111] rounded-xl p-6 h-full relative overflow-hidden"
               >
                 {/* Gradient Background */}
-                <div 
+                <div
                   className={`absolute inset-0 bg-gradient-to-r ${stat.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
                 />
 
@@ -144,8 +150,8 @@ const HackathonStats = () => {
                 </motion.div>
 
                 {/* Counter */}
-                <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">
-                  <CounterComponent 
+                <h3 className="text-xl md:text-4xl font-bold text-white mb-2">
+                  <CounterComponent
                     end={stat.value}
                     prefix={stat.prefix}
                     suffix={stat.suffix}
@@ -165,7 +171,6 @@ const HackathonStats = () => {
             </motion.div>
           ))}
         </motion.div>
-
       </div>
     </div>
   );
