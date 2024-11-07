@@ -36,7 +36,7 @@ const NavigationBar = () => {
       <motion.nav
         initial={{ y: 0 }}
         animate={{ y: 0 }}
-        className={`backdrop-blur-xl bg-gradient-to-b from-[#822d1f] to-green-900 w-full px-4 z-50 transition-all duration-300`}
+        className={`backdrop-blur-xl bg-gradient-to-br from-[#822d1f] to-green-900 w-full px-4 z-50 transition-all duration-300`}
       >
         <div className="max-w-5xl mx-auto px-4">
           <div className="flex items-center justify-between h-20">
