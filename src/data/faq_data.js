@@ -2,7 +2,7 @@
 const faqData = [
     {
       q: "What is I ❤️ Hackathon and how does it work?",
-      a: "I ❤️ Hackathon is a 48-hour coding competition where participants collaborate to build innovative solutions. Teams of 2-4 members work together, attend workshops, receive mentoring, and showcase their projects to win exciting prizes. It's a perfect platform for learning, networking, and turning your ideas into reality."
+      a: "I ❤️ Hackathon is a 24hr competition where participants collaborate to build innovative solutions in web3. Teams of 2-4 members work together, attend workshops, receive mentoring, and showcase their projects to win exciting prizes. It's a perfect platform for learning, networking, and turning your ideas into reality."
     },
     {
       q: "Who can participate and how do I register?",

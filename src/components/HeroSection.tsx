@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 const HeroSection = () => {
@@ -89,7 +90,18 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#822d1f] via-green-900 to-[#822d1f]">
+    <div className="relative max-h-screen overflow-hidden bg-gradient-to-br from-[#822d1f] via-green-900 to-[#822d1f]">
+      <div className="absolute inset-0">
+        <Image
+          src="/assets/background.jpg"
+          alt="Background"
+          layout="fill"
+          className="w-full h-full object-cover"
+        />
+      </div>
+      {/* <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#822d1f] via-green-900 to-[#822d1f]">
+       */}
+
       <AnimatePresence>
         {/* Animated background elements */}
         <div className="absolute inset-0">
@@ -142,7 +154,7 @@ const HeroSection = () => {
               variants={titleItem}
               className="text-6xl md:text-8xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300"
             >
-              I ❤️ Hackathon
+              I<span className="text-red-300 mx-4">❤️</span> Hackathon
             </motion.h1>
             <motion.p
               variants={titleItem}
