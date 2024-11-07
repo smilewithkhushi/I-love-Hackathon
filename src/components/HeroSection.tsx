@@ -152,7 +152,7 @@ const HeroSection = () => {
           >
             <motion.h1
               variants={titleItem}
-              className="text-6xl md:text-8xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300"
+              className="text-6xl md:text-8xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300 font-solway"
             >
               I<span className="text-red-300 mx-4">❤️</span> Hackathon
             </motion.h1>
