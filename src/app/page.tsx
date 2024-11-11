@@ -1,7 +1,6 @@
 import AboutSection from "@/components/about/AboutSection";
 import CallForPartners from "@/components/CallForPartners";
 import FAQSection from "@/components/FAQ";
-import FooterSection from "@/components/FooterSection";
 import HackathonStats from "@/components/HackathonStats";
 import HeroSection from "@/components/HeroSection";
 import PartnersShowcase from "@/components/PartnersShowcase";

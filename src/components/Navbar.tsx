@@ -132,27 +132,6 @@ const NavigationBar = () => {
                             activeDropdown === item.name ? 'rotate-180' : ''
                           }`} />
                         </button>
-                        <AnimatePresence>
-                          {activeDropdown === item.name && (
-                            <motion.div
-                              initial={{ opacity: 0, y: -10 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              exit={{ opacity: 0, y: -10 }}
-                              className="pl-4 space-y-2"
-                            >
-                              {item.dropdown.map((dropdownItem, idx) => (
-                                <motion.a
-                                  key={idx}
-                                  href={dropdownItem.href}
-                                  className="block text-gray-400 hover:text-white"
-                                  whileHover={{ x: 5 }}
-                                >
-                                  {dropdownItem.name}
-                                </motion.a>
-                              ))}
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
                       </div>
                     ) : (
                       <motion.a

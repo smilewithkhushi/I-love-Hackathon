@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import { motion, useScroll } from "framer-motion";
-import { Code, Users, Trophy, Rocket, Brain, Coffee } from "lucide-react";
 import Image from "next/image";
 
 const AboutBlockonSection = () => {
@@ -15,65 +14,7 @@ const AboutBlockonSection = () => {
   useScroll();
 
 
-  const features = [
-    {
-      icon: <Code className="w-6 h-6" />,
-      title: "Code Innovation",
-      description:
-        "Build groundbreaking solutions using cutting-edge technologies",
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: "Team Building",
-      description:
-        "Form diverse teams and collaborate with talented developers",
-    },
-    {
-      icon: <Brain className="w-6 h-6" />,
-      title: "Learning Experience",
-      description:
-        "Access workshops, mentorship, and hands-on learning opportunities",
-    },
-    {
-      icon: <Trophy className="w-6 h-6" />,
-      title: "Awesome Prizes",
-      description:
-        "Win exciting prizes and get recognition for your innovations",
-    },
-    {
-      icon: <Rocket className="w-6 h-6" />,
-      title: "Launch Pad",
-      description: "Turn your prototype into a real-world product",
-    },
-    {
-      icon: <Coffee className="w-6 h-6" />,
-      title: "Network & Fun",
-      description: "Connect with industry experts while having a great time",
-    },
-  ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 10,
-      },
-    },
-  };
 
   return (
     <div className="py-20 px-4 pt-16 pb-10 p-4 lg:p-16">
