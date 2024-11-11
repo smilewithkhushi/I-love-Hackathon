@@ -6,7 +6,7 @@ const faqData = [
     },
     {
       q: "Who can participate and how do I register?",
-      a: "Anyone with a passion for technology can participate! Whether you're a student, professional, or enthusiast, all skill levels are welcome. Registration is completely free - simply click the 'Register Now' button on our website, fill out the form, and join our Discord community. You must be at least 18 years old or have parental consent."
+      a: "Anyone with a passion for technology can participate! Whether you're a student, professional, or enthusiast, all skill levels are welcome. Registration is completely free - simply click the 'Register Now' button on our website, fill out the form, and join our Discord community."
     },
     {
       q: "What should I bring and will there be food?",

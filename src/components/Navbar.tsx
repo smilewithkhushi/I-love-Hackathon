@@ -11,23 +11,18 @@ const NavigationBar = () => {
   const menuItems = [
     {
       name: "About",
-      href: "#about"
+      href: "/about",
+      dropdown: null
     },
     {
-      name: "Events",
-      dropdown: [
-        { name: "Schedule", href: "#schedule" },
-        { name: "Workshops", href: "#workshops" },
-        { name: "Speakers", href: "#speakers" }
-      ]
-    },
-    {
-      name: "Sponsors",
-      href: "#sponsors"
+      name: "Timeline",
+      href: "#timeline",
+      dropdown: null
     },
     {
       name: "Contact",
-      href: "#contact"
+      href: "#contact",
+      dropdown: null
     }
   ];
 
@@ -82,28 +77,6 @@ const NavigationBar = () => {
                     </motion.a>
                   )}
 
-                  {/* Dropdown Menu */}
-                  <AnimatePresence>
-                    {item.dropdown && activeDropdown === item.name && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 10 }}
-                        className="absolute left-0 mt-2 w-48 rounded-xl backdrop-blur-md py-2 shadow-xl"
-                      >
-                        {item.dropdown.map((dropdownItem, idx) => (
-                          <motion.a
-                            key={idx}
-                            href={dropdownItem.href}
-                            className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#822d1f]/20"
-                            whileHover={{ x: 5 }}
-                          >
-                            {dropdownItem.name}
-                          </motion.a>
-                        ))}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
                 </div>
               ))}
 
@@ -195,7 +168,7 @@ const NavigationBar = () => {
                 
                 {/* Mobile Register Button */}
                 <motion.a
-                  href="#register"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfwPRAaudSzJvij7C7DcyLj4FwsLMVWkURtdHhQ_gSPjHVTMw/viewform?pli=1"
                   className="block w-full text-center px-6 py-3 rounded-full bg-[#822d1f] text-white font-medium hover:bg-[#822d1f]/90"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.8 }}

@@ -181,7 +181,7 @@ const HeroSection = () => {
               whileTap="tap"
               className="px-8 py-3 bg-white text-[#822d1f] rounded-full font-bold text-lg transition-colors"
             >
-              <Link href="https://ilovehackathon.devfolio.org">
+              <Link href="https://docs.google.com/forms/d/e/1FAIpQLSfwPRAaudSzJvij7C7DcyLj4FwsLMVWkURtdHhQ_gSPjHVTMw/viewform?pli=1">
                 Register Now
               </Link>
             </motion.div>

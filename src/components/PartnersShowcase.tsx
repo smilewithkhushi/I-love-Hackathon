@@ -7,9 +7,6 @@ import Image from 'next/image';
 const PartnersShowcase = () => {
   // Partner logos data
   const partners = [
-    "/assets/sponsors/Devfolio_Logo.png",
-    "/assets/sponsors/Polygon_Logo.png",
-    "/assets/sponsors/ethindia-light.png",
     "/assets/partners/inbm.png",
 
     "/assets/partners/nuchain.png",

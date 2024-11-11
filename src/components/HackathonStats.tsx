@@ -52,7 +52,7 @@ const HackathonStats = () => {
     {
       icon: <MapPin className="w-8 h-8" />,
       label: "Cities",
-      value: 75,
+      value: 5,
       suffix: "+",
       color: "from-pink-500 to-rose-500",
     },
@@ -67,7 +67,7 @@ const HackathonStats = () => {
     {
       icon: <Award className="w-8 h-8" />,
       label: "Projects",
-      value: 1200,
+      value: 200,
       suffix: "+",
       color: "from-yellow-500 to-orange-500",
     },

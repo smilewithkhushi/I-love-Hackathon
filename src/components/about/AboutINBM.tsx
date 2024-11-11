@@ -3,7 +3,9 @@
 import React, { useState } from "react";
 import { motion, useScroll } from "framer-motion";
 import { Code, Users, Trophy, Rocket, Brain, Coffee } from "lucide-react";
-const AboutSection = () => {
+import Image from "next/image";
+
+const AboutINBMSection = () => {
   const [] = useState<{
     id: number;
     src: string;
@@ -74,7 +76,7 @@ const AboutSection = () => {
   };
 
   return (
-    <div className="min-h-screen bg-blackpy-20 px-4 pt-16 pb-10 p-4 lg:p-16">
+    <div className=" bg-blackpy-20 px-4 pt-16 pb-10 p-4 lg:p-16">
       {/* Main content */}
       <motion.div className="max-w-6xl mx-auto">
         {/* Header */}
@@ -83,10 +85,10 @@ const AboutSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="font-bold text-center mb-8 text-white relative z-10"
+          className="font-bold text-center mb-12 text-white relative z-10"
         >
           <h1 className="text-center text-transparent bg-clip-text bg-gradient-to-r from-[#f72c11] to-[#13A326] font-bold text-2xl md:text-5xl">
-            About the Hackathon
+            About India Blockchain Month
           </h1>
         </motion.h2>
 
@@ -94,48 +96,32 @@ const AboutSection = () => {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="flex flex-row gap-8 justify-around mb-16"
         >
-          <p className="text-sm md:text-xl text-white text-justify md:text-center mx-auto">
-            The I ❤️ Hackathon is a series of 24-hour offline hackathons across
-            5+ cities in India, where developers will gather to build innovative
-            blockchain solutions focused on governance, decentralized finance,
-            gaming, real world assets, tokenization and more!
-            <br />
-            We’re bringing it to Lucknow, Jaipur, Bhubaneswar, Indore,
-            Chandigarh, and Pune, allowing you to compete, create, and connect
-            with the top minds in Web3.
-          </p>
+
+          <div>
+            <p className="text-sm md:text-lg text-white text-justify">
+
+              India Blockchain Month (IBM) is a landmark initiative set to spotlight the potential of blockchain technology across India, reaching cities beyond traditional tech hubs. Organized by BlockOn Ventures, IBM 2024 is a month-long series of events dedicated to building awareness, fostering innovation, and connecting communities within the Web3 ecosystem across 15 cities in India.
+              <br />
+              IBM brings together developers, entrepreneurs, industry leaders, and students to explore blockchain’s transformative power through hackathons, workshops, panel discussions, and networking events. Designed to ignite innovation in Tier 2 and Tier 3 cities, this initiative aims to create opportunities for education and collaboration, driving India’s journey to becoming a global blockchain leader.
+
+            </p>
+          </div>
+
+          <div className="w-full" >
+            <Image src="/assets/partners/inbm.png"
+              alt="India Blockchain Month"
+              objectFit="contain"
+              width={460}
+              height={160}
+            />
+          </div>
         </motion.div>
 
-        {/* Features Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20"
-        >
-          {features.map((feature, index) => (
-            <motion.div
-              key={index}
-              variants={itemVariants}
-              whileHover={{ scale: 1.05 }}
-              className="flex flex-col align-center items-center bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
-            >
-              <div className="bg-[#822d1f]/10 w-12 h-12 rounded-full flex items-center justify-center mb-4 text-[#822d1f]">
-                {feature.icon}
-              </div>
-              <h3 className="text-lg md:text-xl font-bold mb-2 text-[#822d1f]">
-                {feature.title}
-              </h3>
-              <p className="text-gray-600 text-sm text-center">{feature.description}</p>
-            </motion.div>
-          ))}
-        </motion.div>
       </motion.div>
     </div>
   );
 };
 
-export default AboutSection;
+export default AboutINBMSection;

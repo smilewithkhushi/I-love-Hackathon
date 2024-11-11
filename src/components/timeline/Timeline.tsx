@@ -135,19 +135,24 @@ const HackathonTimeline = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className={`px-8 py-3 rounded-full font-medium flex items-center space-x-2 ${
-                    events[selectedEvent].registrationOpen
-                      ? "bg-[#822d1f] text-white"
-                      : "bg-gray-800 text-gray-400 cursor-not-allowed"
+                  events[selectedEvent].registrationOpen
+                    ? "bg-[#822d1f] text-white"
+                    : "bg-gray-800 text-gray-400 cursor-not-allowed"
                   }`}
                   disabled={!events[selectedEvent].registrationOpen}
+                  onClick={() => {
+                  if (events[selectedEvent].registrationOpen) {
+                    window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfwPRAaudSzJvij7C7DcyLj4FwsLMVWkURtdHhQ_gSPjHVTMw/viewform?pli=1";
+                  }
+                  }}
                 >
                   <span>
-                    {events[selectedEvent].registrationOpen
-                      ? "Register Now"
-                      : "Coming Soon"}
+                  {events[selectedEvent].registrationOpen
+                    ? "Register Now"
+                    : "Coming Soon"}
                   </span>
                   {events[selectedEvent].registrationOpen && (
-                    <ArrowRight className="w-5 h-5" />
+                  <ArrowRight className="w-5 h-5" />
                   )}
                 </motion.button>
 
