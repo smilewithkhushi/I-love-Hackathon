@@ -43,7 +43,7 @@ const Prizes: React.FC = () => {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                     >
-                        <img src={`/assets/trophy.png`} alt={prize.title} className="w-35 h-50 object-fit mb-4 rounded-t-lg" />
+                        <Image src={`/assets/trophy.png`} alt={prize.title} className="w-35 h-50 object-fit mb-4 rounded-t-lg" />
 
 
                         <h3 className="text-center text-transparent bg-clip-text bg-gradient-to-r from-[#f72c11] to-[#13A326] font-bold text-lg md:text-2xl">
