@@ -10,7 +10,6 @@ const page = () => {
     <div>
         <HeroSection />
         <AboutSection/>
-        <AboutBlockonSection/>
         <AboutINBMSection/>
         <CallForPartners/>
     </div>

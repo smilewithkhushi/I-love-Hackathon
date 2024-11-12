@@ -2,13 +2,14 @@ const events = [
   
 
   {
-    city: "Bhubaneshwar",
+    city: "Bhubaneswar",
     date: "Dec 17-18, 2024",
-    venue: "Centurion University, Bhubaneshwar, Odisha",
+    venue: "Centurion University, Bhubaneswar, Odisha",
     image: "/assets/college/odisha.jpg",
     description: "",
     timing: "24 Hours",
     registrationOpen: true,
+    registrationLink: "https://unstop.com/hackathons/i-love-hackathon-bhubaneswar-edition-i-love-hackathon-series-centurian-university-1221006",
   },
 
   {

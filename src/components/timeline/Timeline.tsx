@@ -142,7 +142,7 @@ const HackathonTimeline = () => {
                   disabled={!events[selectedEvent].registrationOpen}
                   onClick={() => {
                   if (events[selectedEvent].registrationOpen) {
-                    window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfwPRAaudSzJvij7C7DcyLj4FwsLMVWkURtdHhQ_gSPjHVTMw/viewform?pli=1";
+                    window.location.href = "https://unstop.com/hackathons/i-love-hackathon-bhubaneswar-edition-i-love-hackathon-series-centurian-university-1221006";
                   }
                   }}
                 >

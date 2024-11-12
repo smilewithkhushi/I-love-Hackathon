@@ -78,16 +78,6 @@ const HeroSection = () => {
     },
   };
 
-  React.useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://apply.devfolio.co/v2/sdk.js";
-    script.async = true;
-    script.defer = true;
-    document.body.appendChild(script);
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
 
   return (
     <div className="relative max-h-screen overflow-hidden bg-gradient-to-br from-[#822d1f] via-green-900 to-[#822d1f]">
@@ -181,7 +171,7 @@ const HeroSection = () => {
               whileTap="tap"
               className="px-8 py-3 bg-white text-[#822d1f] rounded-full font-bold text-lg transition-colors"
             >
-              <Link href="https://docs.google.com/forms/d/e/1FAIpQLSfwPRAaudSzJvij7C7DcyLj4FwsLMVWkURtdHhQ_gSPjHVTMw/viewform?pli=1">
+              <Link href="https://unstop.com/college-fests/i-love-hackathon-series-i-hackathon-285139">
                 Register Now
               </Link>
             </motion.div>
