@@ -36,7 +36,7 @@ const AboutINBMSection = () => {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="flex flex-row gap-8 justify-around mb-16"
+          className="flex flex-col md:flex-row gap-8 justify-around mb-16"
         >
 
           <div>

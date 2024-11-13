@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 import { 
   Twitter, 
   Linkedin, 
-  Instagram,
   Heart
 } from 'lucide-react';
 
@@ -19,9 +18,8 @@ const StyledFooter = () => {
   // ];
 
   const socialLinks = [
-    { icon: <Twitter className="w-5 h-5" />, href: "https://x.com/indiablockchainmonth", label: "Twitter" },
-    { icon: <Linkedin className="w-5 h-5" />, href: "https://linkedin.com/c/indiablockchainmonth", label: "LinkedIn" },
-    { icon: <Instagram className="w-5 h-5" />, href: "https://instagram.com/indiablockchainmonth", label: "Instagram" },
+    { icon: <Twitter className="w-5 h-5" />, href: "https://x.com/INBMOfficial", label: "Twitter" },
+    { icon: <Linkedin className="w-5 h-5" />, href: "https://linkedin.com/company/india-blockchain-month-inbm/mycompany/", label: "LinkedIn" },
 
   ];
 

@@ -147,7 +147,7 @@ const NavigationBar = () => {
                 
                 {/* Mobile Register Button */}
                 <motion.a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSfwPRAaudSzJvij7C7DcyLj4FwsLMVWkURtdHhQ_gSPjHVTMw/viewform?pli=1"
+                  href="https://unstop.com/college-fests/i-love-hackathon-series-i-hackathon-285139"
                   className="block w-full text-center px-6 py-3 rounded-full bg-[#822d1f] text-white font-medium hover:bg-[#822d1f]/90"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.8 }}
