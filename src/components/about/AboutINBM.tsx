@@ -50,7 +50,7 @@ const AboutINBMSection = () => {
           </div>
 
           <div className="w-full" >
-            <Image src="/assets/partners/inbm.png"
+            <Image src="/assets/sponsors/inbm.png"
               alt="India Blockchain Month"
               objectFit="contain"
               width={460}

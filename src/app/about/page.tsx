@@ -1,4 +1,5 @@
 //import AboutBlockonSection from '@/components/about/AboutBlockon'
+import AboutBlockonSection from '@/components/about/AboutBlockon'
 import AboutINBMSection from '@/components/about/AboutINBM'
 import AboutSection from '@/components/about/AboutSection'
 import CallForPartners from '@/components/CallForPartners'
@@ -11,6 +12,7 @@ const page = () => {
         <HeroSection />
         <AboutSection/>
         <AboutINBMSection/>
+        <AboutBlockonSection/>
         <CallForPartners/>
     </div>
   )

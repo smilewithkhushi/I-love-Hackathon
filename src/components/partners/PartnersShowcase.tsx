@@ -3,16 +3,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import partners from '../../data/partners';
 
 const PartnersShowcase = () => {
-  // Partner logos data
-  const partners = [
-    "/assets/partners/inbm.png",
-
-    "/assets/partners/nuchain.png",
-
-    "/assets/partners/blockon.png",
-  ];
 
   return (
     <div className="bg-[#0A0A0A] py-20 overflow-hidden">

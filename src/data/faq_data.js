@@ -5,6 +5,10 @@ const faqData = [
       a: "I ❤️ Hackathon is a 24hr competition where participants collaborate to build innovative solutions in web3. Teams of 2-4 members work together, attend workshops, receive mentoring, and showcase their projects to win exciting prizes. It's a perfect platform for learning, networking, and turning your ideas into reality."
     },
     {
+      q: "Can I participate online?",
+      a: "Yes you can participate online from anywhere for this hackathon. Go to the website and register for whatever city you like!"
+    },
+    {
       q: "Who can participate and how do I register?",
       a: "Anyone with a passion for technology can participate! Whether you're a student, professional, or enthusiast, all skill levels are welcome. Registration is completely free - simply click the 'Register Now' button on our website, fill out the form, and join our Discord community."
     },

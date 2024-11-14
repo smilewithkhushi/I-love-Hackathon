@@ -16,7 +16,7 @@ const NavigationBar = () => {
     },
     {
       name: "Timeline",
-      href: "#timeline",
+      href: "/timeline",
       dropdown: null
     },
     {
