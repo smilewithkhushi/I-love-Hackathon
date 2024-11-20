@@ -1,8 +1,5 @@
 import {
-    Brain,
     Globe,
-    Heart,
-    TreePine,
     ShieldCheck,
     LuggageIcon,
     DollarSign,
@@ -30,12 +27,12 @@ const themes = [
     },
     {
         id: 7,
-        title: "Decentralized Finance",
+        title: "Banking and Finance (BFSI)",
         icon: DollarSign,
         color: 'bg-blue-500',
         gradient: 'from-blue-500 to-cyan-500',
         description: 'Create financial solutions using decentralized technologies. Explore opportunities in lending, borrowing, and trading.',
-        topics: ['Lending Protocols', 'Automated Market Makers', 'Yield Farming', 'Stablecoins']
+        topics: ['Lending Protocols', 'Automated Market Makers', 'Yield Farming', 'Stablecoins', "DeFi", "CeFi"]
     },
     {
         id: 8,
@@ -47,41 +44,14 @@ const themes = [
         topics: ['Flight Booking', 'Hotel Reservations', 'Travel Insurance', 'Sustainable Tourism']
     },
     {
-        id: 1,
-        title: 'AI & Machine Learning',
-        icon: Brain,
-        color: 'bg-purple-500',
-        gradient: 'from-purple-500 to-blue-500',
-        description: 'Build innovative solutions using artificial intelligence and machine learning algorithms. Focus on real-world applications that can make a difference.',
-        topics: ['Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'Neural Networks']
-    },
-    {
-        id: 2,
-        title: 'Sustainability',
-        icon: TreePine,
-        color: 'bg-green-500',
-        gradient: 'from-green-500 to-emerald-500',
-        description: 'Create solutions for environmental challenges. Focus on renewable energy, waste reduction, and sustainable practices.',
-        topics: ['Clean Energy', 'Waste Management', 'Carbon Footprint', 'Smart Cities']
-    },
-    {
-        id: 3,
-        title: 'Healthcare Tech',
-        icon: Heart,
-        color: 'bg-red-500',
-        gradient: 'from-red-500 to-pink-500',
-        description: 'Develop innovative healthcare solutions using technology. Address medical challenges and improve patient care.',
-        topics: ['Telemedicine', 'Health Monitoring', 'Medical Data Analysis', 'Patient Care']
-    },
-    {
-        id: 4,
-        title: 'Cybersecurity',
+        id: 9,
+        title: "Gaming",
         icon: ShieldCheck,
-        color: 'bg-blue-500',
-        gradient: 'from-blue-500 to-cyan-500',
-        description: 'Build solutions for digital security and privacy. Protect data and systems from cyber threats.',
-        topics: ['Network Security', 'Data Privacy', 'Blockchain', 'Authentication']
-    }
+        color: 'bg-red-500',
+        gradient: 'from-red-500 to-rose-500',
+        description: 'Create games using blockchain technology. Explore the potential of play-to-earn and decentralized gaming.',
+        topics: ['NFT Gaming', 'Play-to-Earn', 'GameFi', 'Decentralized Virtual Worlds']
+    },
 ];
 
 

@@ -20,8 +20,13 @@ const NavigationBar = () => {
       dropdown: null
     },
     {
+      name: "Themes",
+      href: "/problem-statements",
+      dropdown: null
+    },
+    {
       name: "Contact",
-      href: "#contact",
+      href: "https://discord.com/invite/76zRubDkkj",
       dropdown: null
     }
   ];
@@ -128,9 +133,8 @@ const NavigationBar = () => {
                           )}
                         >
                           <span>{item.name}</span>
-                          <ChevronDown className={`w-4 h-4 transform transition-transform ${
-                            activeDropdown === item.name ? 'rotate-180' : ''
-                          }`} />
+                          <ChevronDown className={`w-4 h-4 transform transition-transform ${activeDropdown === item.name ? 'rotate-180' : ''
+                            }`} />
                         </button>
                       </div>
                     ) : (
@@ -144,7 +148,7 @@ const NavigationBar = () => {
                     )}
                   </div>
                 ))}
-                
+
                 {/* Mobile Register Button */}
                 <motion.a
                   href="https://unstop.com/college-fests/i-love-hackathon-series-i-hackathon-285139"

@@ -38,7 +38,7 @@ const PartnersShowcase = () => {
               x: {
                 repeat: Infinity,
                 repeatType: "loop",
-                duration: 20,
+                duration: 60,
                 ease: "linear",
               },
             }}
@@ -46,7 +46,7 @@ const PartnersShowcase = () => {
             {[...partners, ...partners].map((logo, index) => (
               <motion.div
                 key={index}
-                className="relative group w-[300px] h-[120px] bg-gray-800 hover:bg-[#F29244] rounded-xl flex items-center justify-center p-6"
+                className="relative group w-[200px] h-[120px] bg-gray-800 hover:bg-[#F29244] rounded-xl flex items-center justify-center p-6"
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
@@ -84,7 +84,7 @@ const PartnersShowcase = () => {
             {[...partners, ...partners].map((logo, index) => (
               <motion.div
                 key={index}
-                className="relative group w-[300px] h-[120px] bg-gray-700  hover:bg-[#F29244] rounded-xl flex items-center justify-center p-6"
+                className="relative group w-[200px] h-[120px] bg-gray-700  hover:bg-[#F29244] rounded-xl flex items-center justify-center p-6"
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
