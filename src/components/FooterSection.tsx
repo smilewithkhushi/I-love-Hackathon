@@ -120,7 +120,7 @@ const StyledFooter = () => {
             >
               <span>© 2024 I ❤️ Hackathon. Made with</span>
               <Heart className="w-4 h-4 text-[#822d1f]" />
-              <span>by Hackers</span>
+              <span>by @smilewithkhushi</span>
             </motion.p>
             {/* <div className="mt-4 md:mt-0">
               <motion.a 

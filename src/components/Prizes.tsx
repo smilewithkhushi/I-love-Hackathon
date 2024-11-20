@@ -6,8 +6,8 @@ import { Trophy, Award, Medal } from 'lucide-react';
 const prizes = [
     {
         title: 'First Place',
-        description: 'Winner team from each city will be awarded. Every winning team member will receive exclusive goodies and official certificates. All winning teams will be invited for a grand felicitation at the Goa conference.',
-        prize: '$1500',
+        description: 'Winner team from each city will be awarded $300, goodies and certificates. All winning teams will be invited for a grand felicitation at the Goa conference. Additional $100 for the winning team having atleast one female participant.',
+        prize: '$1800',
         icon: Trophy,
         gradient: 'from-yellow-300 via-yellow-400 to-yellow-500',
         shadowColor: 'shadow-yellow-500/20',
@@ -15,8 +15,8 @@ const prizes = [
     },
     {
         title: 'Second Place',
-        description: 'Runner Up Team from each city will be awarded. Every winning team member will receive exclusive goodies and official certificates.',
-        prize: '$1000',
+        description: 'Runner Up Team from each city will be awarded with $200, goodies and certificates. Additional $100 for the winning team having atleast one female participant.',
+        prize: '$1200',
         icon: Award,
         gradient: 'from-gray-300 via-gray-400 to-gray-500',
         shadowColor: 'shadow-gray-500/20',
@@ -24,8 +24,8 @@ const prizes = [
     },
     {
         title: 'Third Place',
-        description: 'Second Runner Up team from each city will be awarded. Every winning team member will receive exclusive goodies and official certificates.',
-        prize: '$500',
+        description: 'Second Runner Up team from each city will be awarded with $100, goodies and certificates. Additional $100 for the winning team having atleast one female participant.',
+        prize: '$600',
         icon: Medal,
         gradient: 'from-amber-500 via-amber-600 to-amber-700',
         shadowColor: 'shadow-amber-500/20',

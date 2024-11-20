@@ -80,7 +80,7 @@ const HeroSection = () => {
 
 
   return (
-    <div className="relative max-h-screen overflow-hidden bg-gradient-to-br from-[#822d1f] via-green-900 to-[#822d1f]">
+    <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#822d1f] via-green-900 to-[#822d1f]">
       <div className="absolute inset-0">
         <Image
           src="/assets/background.jpg"
@@ -125,7 +125,7 @@ const HeroSection = () => {
         <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 text-white">
           {/* Floating banner */}
           <motion.div
-            className="mb-10 px-4 py-2 bg-white/10 backdrop-blur rounded-full text-sm font-medium"
+            className="mb-6 px-4 py-2 bg-white/10 backdrop-blur rounded-full text-sm font-medium"
             variants={floatingBanner}
             initial="initial"
             animate="animate"
@@ -140,6 +140,18 @@ const HeroSection = () => {
             animate="animate"
             className="text-center"
           >
+
+            <motion.div 
+            variants={titleItem}
+            className="flex flex-row gap-4 items-center align-middle justify-center my-8 text-white">
+              Powered by
+              <Image
+                src="/assets/sponsors/unstop.png"
+                alt="Unstop Logo"
+                width={80}
+                height={10}
+                className="mt-4" />
+            </motion.div>
             <motion.h1
               variants={titleItem}
               className="text-6xl md:text-8xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300 font-solway"

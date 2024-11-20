@@ -100,11 +100,11 @@ const HackathonThemes = () => {
                     className="font-bold text-center mb-12 text-white relative z-10"
                 >
                     <h1 className="text-center text-transparent bg-clip-text bg-gradient-to-r from-[#f72c11] to-[#13A326] font-bold text-2xl md:text-5xl">
-                        Hackathon Themes
+                        Themes & Problem Statements
                     </h1>
                     <p className="text-gray-400 my-8 max-w-2xl mx-auto">
-                        Choose from our carefully selected themes and build something amazing.
-                        Each theme offers unique challenges and opportunities to innovate.
+                        Build your projects for the problem statements that comes under one or more of the following themes! 
+                        Experiment with technologies, tools, and ideas to create something innovative and impactful.
                     </p>
 
                 </motion.h2>

@@ -88,7 +88,7 @@ const HackathonStats = () => {
     {
       icon: <Trophy className="w-8 h-8" />,
       label: "Prize Pool",
-      value: 5000,
+      value: 6000,
       prefix: "$",
       color: "from-cyan-500 to-blue-500",
     },
