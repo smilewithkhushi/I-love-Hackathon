@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# I Love Hackathon
+
+Welcome to the **I Love Hackathon** project! This repository contains all the resources and information you need to participate in our hackathon.
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Getting Started](#getting-started)
+- [Rules](#rules)
+- [Submission Guidelines](#submission-guidelines)
+- [Judging Criteria](#judging-criteria)
+- [Prizes](#prizes)
+- [Contact](#contact)
+
+## Introduction
+
+The **I Love Hackathon** is an exciting event where developers, designers, and entrepreneurs come together to create innovative solutions to real-world problems. Whether you're a seasoned hacker or a first-time participant, this hackathon is for you!
 
 ## Getting Started
 
-First, run the development server:
+To get started, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. **Register**: Sign up for the hackathon on our [official website](#).
+2. **Join the Discord**: Connect with other participants and mentors on our [Discord server](#).
+3. **Form a Team**: Find team members or join an existing team.
+4. **Start Hacking**: Begin working on your project as soon as the hackathon starts.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Rules
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- All team members must be registered participants.
+- Projects must be started and completed within the hackathon timeframe.
+- All code must be original or properly attributed.
+- Teams can have a maximum of 5 members.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Submission Guidelines
 
-## Learn More
+- Submit your project on our [submission portal](#) before the deadline.
+- Include a link to your project's repository.
+- Provide a brief description of your project and its features.
+- Include a demo video (maximum 5 minutes).
 
-To learn more about Next.js, take a look at the following resources:
+## Judging Criteria
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Projects will be judged based on the following criteria:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Innovation**: How unique and creative is the solution?
+- **Impact**: How significant is the problem being addressed?
+- **Technical Difficulty**: How challenging is the implementation?
+- **Presentation**: How well is the project presented?
 
-## Deploy on Vercel
+## Prizes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **1st Place**: $300*6
+- **2nd Place**: $200*6
+- **3rd Place**: $100*6
+- **Special Awards**: Additional prizes for categories such as Best Design, Best Use of Technology, etc.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+We look forward to seeing your amazing projects!
+
+Happy hacking!
