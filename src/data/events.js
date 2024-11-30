@@ -22,16 +22,6 @@ const events = [
     registrationLink: "https://unstop.com/hackathons/i-love-hackathon-chennai-web3-edition-i-hackathon-series-vit-chennai-1222562",
   },
   {
-    city: "Jaipur",
-    date: "Dec 6-7, 2024",
-    venue: "Jaipur",
-    image: "/assets/college/jaipur.jpg",
-    description: "Revealing Soon!",
-    timing: "24 Hours Hybrid",
-    registrationOpen: true,
-    registrationLink: "https://unstop.com/hackathons/i-love-hackathon-jaipur-web3-edition-i-hackathon-series-centurian-university-1224357",
-  },
-  {
     city: "Indore",
     date: "Dec , 2024",
     venue: "Indore",
@@ -43,7 +33,7 @@ const events = [
   {
     city: "Pune",
     date: "Dec 21-22, 2024",
-    venue: "Revealing Soon!",
+    venue: "VIT Pune",
     image: "/assets/college/pune.jpg",
     description: "",
     timing: "24 Hours (Hybrid)",
@@ -62,3 +52,16 @@ const events = [
 ];
 
 export default events;
+
+
+
+// {
+//   city: "Jaipur",
+//   date: "Dec 6-7, 2024",
+//   venue: "Jaipur",
+//   image: "/assets/college/jaipur.jpg",
+//   description: "Revealing Soon!",
+//   timing: "24 Hours Hybrid",
+//   registrationOpen: true,
+//   registrationLink: "https://unstop.com/hackathons/i-love-hackathon-jaipur-web3-edition-i-hackathon-series-centurian-university-1224357",
+// },
