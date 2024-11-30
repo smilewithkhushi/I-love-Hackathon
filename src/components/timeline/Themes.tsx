@@ -103,8 +103,8 @@ const HackathonThemes = () => {
                         Themes & Problem Statements
                     </h1>
                     <p className="text-gray-400 my-8 max-w-2xl mx-auto">
-                        Build your projects for the problem statements that comes under one or more of the following themes! 
-                        Experiment with technologies, tools, and ideas to create something innovative and impactful.
+                        Build your web3/blokchain based projects for the problem statements that comes under one or more of the following themes! 
+                        Experiment with technologies, tools, and ideas with Web3/Blockchain to create something innovative and impactful.
                     </p>
 
                 </motion.h2>
