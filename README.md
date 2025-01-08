@@ -1,61 +1,51 @@
 # I Love Hackathon
 
-Welcome to the **I Love Hackathon** project! This repository contains all the resources and information you need to participate in our hackathon.
+Welcome to the **I Love Hackathon** project! This repository is dedicated to building an open-source community hackathon website. Our goal is to create a platform where developers, designers, and enthusiasts can collaborate, innovate, and showcase their skills.
 
-## Table of Contents
+## Features
 
-- [Introduction](#introduction)
-- [Getting Started](#getting-started)
-- [Rules](#rules)
-- [Submission Guidelines](#submission-guidelines)
-- [Judging Criteria](#judging-criteria)
-- [Prizes](#prizes)
-- [Contact](#contact)
+- **Event Management**: Create and manage hackathon events.
+- **Team Collaboration**: Form teams and work together on projects.
+- **Project Showcase**: Display and share your hackathon projects.
+- **Community Engagement**: Connect with other participants and mentors.
 
-## Introduction
+## Preview
 
-The **I Love Hackathon** is an exciting event where developers, designers, and entrepreneurs come together to create innovative solutions to real-world problems. Whether you're a seasoned hacker or a first-time participant, this hackathon is for you!
+| ![alt text](image.png) | ![alt text](image-1.png) |
+|------------------------|--------------------------|
+| ![alt text](image-2.png) | ![alt text](image-3.png) |
 
 ## Getting Started
 
-To get started, follow these steps:
+To get a local copy up and running, follow these simple steps.
 
-1. **Register**: Sign up for the hackathon on our [official website](#).
-2. **Join the Discord**: Connect with other participants and mentors on our [Discord server](#).
-3. **Form a Team**: Find team members or join an existing team.
-4. **Start Hacking**: Begin working on your project as soon as the hackathon starts.
+### Prerequisites
 
-## Rules
+- Node.js
+- npm
 
-- All team members must be registered participants.
-- Projects must be started and completed within the hackathon timeframe.
-- All code must be original or properly attributed.
-- Teams can have a maximum of 5 members.
+### Installation
 
-## Submission Guidelines
+1. Clone the repo
+    ```sh
+    git clone https://github.com/your-username/I-love-Hackathon.git
+    ```
+2. Install NPM packages
+    ```sh
+    npm install
+    ```
+3. Start the development server
+    ```sh
+    npm start
+    ```
 
-- Submit your project on our [submission portal](#) before the deadline.
-- Include a link to your project's repository.
-- Provide a brief description of your project and its features.
-- Include a demo video (maximum 5 minutes).
+## Contributing
 
-## Judging Criteria
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-Projects will be judged based on the following criteria:
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-- **Innovation**: How unique and creative is the solution?
-- **Impact**: How significant is the problem being addressed?
-- **Technical Difficulty**: How challenging is the implementation?
-- **Presentation**: How well is the project presented?
-
-## Prizes
-
-- **1st Place**: $300*6
-- **2nd Place**: $200*6
-- **3rd Place**: $100*6
-- **Special Awards**: Additional prizes for categories such as Best Design, Best Use of Technology, etc.
-
-
-We look forward to seeing your amazing projects!
-
-Happy hacking!
